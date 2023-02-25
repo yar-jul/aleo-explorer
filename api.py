@@ -71,7 +71,8 @@ db: Database
 
 
 async def run():
-    config = uvicorn.Config("api:app", reload=True, log_level="info", port=int(os.environ.get("API_PORT", 8001)))
+    config = uvicorn.Config("api:app", reload=True, log_level="info", port=int(os.environ.get("API_PORT", 8001)),
+                            host="0.0.0.0")
     logging.getLogger("uvicorn.access").handlers = []
     server = Server(config=config)
 

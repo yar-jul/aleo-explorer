@@ -939,7 +939,8 @@ lns: LightNodeState | None = None
 
 
 async def run(light_node_state: LightNodeState):
-    config = uvicorn.Config("webui:app", reload=True, log_level="info", port=int(os.environ.get("PORT", 8000)))
+    config = uvicorn.Config("webui:app", reload=True, log_level="info", port=int(os.environ.get("PORT", 8000)),
+                            host="0.0.0.0")
     logging.getLogger("uvicorn.access").handlers = []
     server = Server(config=config)
     global lns

@@ -1,0 +1,4 @@
+aleo-explorer-rust/Cargo.lock
+aleo-explorer-rust/target
+aleo-explorer-rust/build
+aleo-explorer-rust/aleo_explorer_rust.egg-info
